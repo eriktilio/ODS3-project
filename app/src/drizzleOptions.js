@@ -1,15 +1,17 @@
-import Migrations from "./contracts/Migrations.json";
+import SmartContract from "./contracts/SmartContract.json";
 
 const options = {
   web3: {
     block: false,
     fallback: {
       type: "ws",
-      url: "ws://127.0.0.1:8545",
+      url: "ws://127.0.0.1:7545",
     },
   },
-  contracts: [Migrations],
-  events: {},
+  contracts: [SmartContract],
+  events: {
+    SmartContract: ["RegisteredUser", "RegisteredProduct"],
+  },
   polls: {
     accounts: 5000,
   },

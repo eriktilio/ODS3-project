@@ -1,5 +1,8 @@
 <template>
-  <router-view v-if="isDrizzleInitialized" />
+  <vue-page-transition v-if="isDrizzleInitialized" name="fade">
+    <router-view />
+  </vue-page-transition>
+  <div v-else class="spinner-border" role="status"></div>
 </template>
 
 <script>
@@ -9,4 +12,9 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+.spinner-border {
+  height: 150px;
+  width: 150px;
+}
+</style>
