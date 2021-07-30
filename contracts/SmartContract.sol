@@ -79,4 +79,8 @@ contract SmartContract {
             product.description
         );
     }
+
+    function getLengthProductList() public view returns (uint256) {
+        return productList.length;
+    }
 }
