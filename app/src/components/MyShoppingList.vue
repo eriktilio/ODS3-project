@@ -100,7 +100,6 @@ export default {
       this.myShoppingList = this.myShoppingList.filter((element) => {
         return element.buyer === this.$store.state.accounts.activeAccount;
       });
-      console.log(this.myShoppingList);
     },
     async confirmedPurchase(index) {
       try {
@@ -121,6 +120,7 @@ export default {
 
 .btn-success {
   position: absolute;
-  left: 196px;
+  top: 30px;
+  left: 232px;
 }
 </style>

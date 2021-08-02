@@ -1,6 +1,6 @@
 <template>
   <div
-    :v-if="{{available !== false}}"
+    :v-if="available !== false"
     class="card shadow"
     style="width: 18rem; margin: 15px 15px;"
   >

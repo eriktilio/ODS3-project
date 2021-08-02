@@ -9610,12 +9610,12 @@
     "5777": {
       "events": {},
       "links": {},
-      "address": "0x6E34B1C1a4885594514799966e4c92033c61f428",
-      "transactionHash": "0xcb77a4332b07cbfee9fcb7acc7a30375858a4bf158b8284e8337b3e96be34ac3"
+      "address": "0x389C5F5A1d85a99Fa6C04127d4D70053fB2FC55C",
+      "transactionHash": "0xdafb208538e9d11da2227ab4f2a772d53787297692b24541fc2da2e8c86f3c3a"
     }
   },
   "schemaVersion": "3.4.2",
-  "updatedAt": "2021-08-02T21:41:46.349Z",
+  "updatedAt": "2021-08-02T21:51:29.086Z",
   "networkType": "ethereum",
   "devdoc": {
     "details": "Store & retrieve value in a variable",
