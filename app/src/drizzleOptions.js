@@ -10,7 +10,7 @@ const options = {
   },
   contracts: [SmartContract],
   events: {
-    SmartContract: ["RegisteredUser", "RegisteredProduct"],
+    SmartContract: ["RegisteredProduct", "RegisteredOrder", "UpdatedOrder"],
   },
   polls: {
     accounts: 5000,

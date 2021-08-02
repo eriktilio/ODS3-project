@@ -27,6 +27,8 @@
           id="navbarNav"
         >
           <ul class="navbar-nav">
+            <MySalesList />
+            <MyShoppingList />
             <li class="nav-item">
               <RegisterProduct />
             </li>
@@ -53,15 +55,23 @@
   </div>
 </template>
 <script>
+import MySalesList from "../components/MySalesList";
+import MyShoppingList from "../components/MyShoppingList";
 import RegisterProduct from "../components/RegisterProduct";
 
 export default {
   components: {
     RegisterProduct,
+    MySalesList,
+    MyShoppingList,
   },
 };
 </script>
 <style scoped>
+.navbar {
+  user-select: none;
+}
+
 h4 {
   margin-bottom: -0.5rem;
   margin-left: 3px;
@@ -76,19 +86,18 @@ h4 {
   border: none;
 }
 
-.fas {
-  margin-right: 10px;
-}
-
 .fa-shopping-bag {
   color: grey;
+  margin-right: 10px;
 }
 
 .fa-dollar-sign {
   color: #118c4d;
+  margin-right: 10px;
 }
 
 .fa-gift {
   color: red;
+  margin-right: 10px;
 }
 </style>
