@@ -1,6 +1,6 @@
 <template>
   <div
-    v-if="item['available'] != false"
+    :v-if="{{available !== false}}"
     class="card shadow"
     style="width: 18rem; margin: 15px 15px;"
   >
@@ -23,7 +23,7 @@
 </template>
 <script>
 export default {
-  props: ["type", "title", "description", "price", "farmer"],
+  props: ["type", "available", "title", "description", "price", "farmer"],
   data() {
     return {
       subtitle: "",

@@ -71,9 +71,9 @@
 import { mapGetters } from "vuex";
 
 export default {
-  props: ["title", "index", "type", "farmer", "description"],
+  props: ["title", "index", "type", "farmer", "description", "price"],
   data() {
-    return { localDelivery: "", subtitle: "" };
+    return { accounts: [], localDelivery: "", subtitle: "" };
   },
   created() {
     this.subtitle = JSON.parse(this.description);
@@ -87,7 +87,11 @@ export default {
       try {
         await this.drizzleInstance.contracts.SmartContract.methods.buyProduct.cacheSend(
           this.index,
-          this.localDelivery
+          this.localDelivery,
+          {
+            from: this.accounts[0],
+            value: this.price,
+          }
         );
       } catch (error) {
         console.log(error);

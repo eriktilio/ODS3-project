@@ -120,7 +120,7 @@ export default {
 }
 
 .btn-success {
-  position: relative;
+  position: absolute;
   left: 196px;
 }
 </style>

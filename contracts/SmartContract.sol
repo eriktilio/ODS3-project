@@ -127,12 +127,16 @@ contract SmartContract {
         }
     }
 
+    function setDelivery(uint256 _index) public {
+        orders[_index].delivered = true;
+    }
+
     function buyProduct(uint256 _index, string memory _deliveryPlace)
         public
         payable
     {
         Product memory product = productList[_index];
-        //require(product.price == msg.value);
+        require(product.price == msg.value);
         amount += msg.value;
         product.available = false;
         setOrder(_index, product, msg.sender, product.farmer, _deliveryPlace);
@@ -145,7 +149,7 @@ contract SmartContract {
         setProductOwner(order.buyer, _index);
         amount -= product.price;
         order.seller.transfer(product.price);
-
+        setDelivery(_index);
         emit UpdatedOrder();
     }
 }
